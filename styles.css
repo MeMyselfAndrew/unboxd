@@ -6,7 +6,7 @@
 }
 
 .navbar{
-    background: #131313;
+    background: #105849;
     height: 88px;
     display: flex;
     justify-content: center;
@@ -195,4 +195,5 @@
     #mobile-menu.is-active .bar:nth-child(3){
         transform: translateY(-8px) rotate(-45deg);
     }
+>>>>>>> 70cdfabd1048e4397cf509f142bab78c5e53079b
 }
