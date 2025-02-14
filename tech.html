@@ -2,37 +2,53 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HTML CSS Website</title>
-    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Unboxd – Online Trading Marketplace</title>
+    
+    <!-- Font Awesome for icons -->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
       integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
       crossorigin="anonymous"
     />
+    
+    <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    
+    <!-- Your custom stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
   </head>
+  
   <body>
+    <!-- Navbar -->
     <nav class="navbar">
       <div class="navbar__container">
-        <a href="/" id="navbar__logo"><i class="fas fa-gem"></i>NEXT</a>
+        <!-- Updated logo/icon for Unboxd -->
+        <a href="/" id="navbar__logo">
+          <i class="fas fa-box-open"></i>Unboxd
+        </a>
+        
+        <!-- Hamburger toggle for mobile screens -->
         <div class="navbar__toggle" id="mobile-menu">
-          <span class="bar"></span> <span class="bar"></span>
+          <span class="bar"></span> 
+          <span class="bar"></span>
           <span class="bar"></span>
         </div>
+        
+        <!-- Navbar Menu Items -->
         <ul class="navbar__menu">
           <li class="navbar__item">
             <a href="/" class="navbar__links">Home</a>
           </li>
           <li class="navbar__item">
-            <a href="/tech" class="navbar__links">Tech</a>
+            <a href="/marketplace" class="navbar__links">Marketplace</a>
           </li>
           <li class="navbar__item">
-            <a href="/products" class="navbar__links">Products</a>
+            <a href="/trades" class="navbar__links">Trades</a>
           </li>
           <li class="navbar__btn">
             <a href="/sign-up" class="button">Sign Up</a>
@@ -40,19 +56,31 @@
         </ul>
       </div>
     </nav>
+    
+    <!-- Hero/Main Section -->
     <div class="main">
       <div class="main__container">
         <div class="main__content">
-          <h1>TECH SECTION</h1>
-          <p>Check out our technologies</p>
-          <button class="main__btn"><a href="#">Get Started</a></button>
+          <h1>Welcome to Unboxd</h1>
+          <p>Your one-stop marketplace for trading collectibles</p>
+          <button class="main__btn">
+            <a href="/get-started">Get Started</a>
+          </button>
         </div>
+        
+        <!-- Hero Image -->
         <div class="main__img-container">
-          <img id="main__img" src="images/pic2.jpg" />
+          <!-- Swap this out for your own hero image or graphic -->
+          <img 
+            id="main__img" 
+            src="images/unboxd-hero.jpg" 
+            alt="A display of collectible figurines" 
+          />
         </div>
       </div>
     </div>
 
+    <!-- Optional JS file for mobile menu functionality -->
     <script src="app.js"></script>
   </body>
 </html>
