@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Unboxd – Header (No Categories)</title>
+  <title>Unboxd – Messages</title>
 
   <!-- Font Awesome for Icons -->
   <link
@@ -26,12 +26,10 @@
       box-sizing: border-box;
       font-family: 'Kumbh Sans', sans-serif;
     }
-
     body {
       background: #f2f2f2;
       color: #333;
     }
-
     /* ========== HEADER ========== */
     header {
       width: 100%;
@@ -39,8 +37,6 @@
       display: flex;
       flex-direction: column;
     }
-
-    /* ========== TOP NAV ========== */
     .top-nav {
       display: flex;
       align-items: center;
@@ -48,8 +44,6 @@
       padding: 0.75rem 1rem;
       background-color: #131313;
     }
-
-    /* Left: Logo (Home) */
     .logo {
       text-decoration: none;
       color: #fff;
@@ -60,8 +54,6 @@
     .logo i {
       margin-right: 0.5rem;
     }
-
-    /* Center: Search Bar */
     .search-bar {
       display: flex;
       align-items: center;
@@ -85,8 +77,6 @@
       font-size: 1.1rem;
       cursor: pointer;
     }
-
-    /* Right: Icons (Trade, Messages, Notifications, Wishlist, Profile) */
     .nav-icons {
       display: flex;
       align-items: center;
@@ -116,8 +106,7 @@
     .nav-icons a:hover i {
       color: #f77062;
     }
-
-    /* DEMO MAIN CONTENT */
+    /* MAIN CONTENT */
     main {
       max-width: 1200px;
       margin: 1.5rem auto;
@@ -126,47 +115,100 @@
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
+    .messages-header {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .messages-container {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 1rem;
+    }
+    .chat-list {
+      background: #fafafa;
+      border-radius: 6px;
+      padding: 1rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .chat-list h3 {
+      margin-bottom: 0.5rem;
+      color: #105849;
+    }
+    .chat-window {
+      background: #fafafa;
+      border-radius: 6px;
+      padding: 1rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .chat-window h3 {
+      margin-bottom: 0.5rem;
+      color: #105849;
+    }
+    .chat-bubble {
+      background: #fff;
+      margin: 0.5rem 0;
+      padding: 0.75rem;
+      border-radius: 4px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    }
   </style>
 </head>
 <body>
 
   <!-- HEADER -->
   <header>
-    <!-- TOP NAV -->
     <div class="top-nav">
-      <!-- Left: Logo -->
-      <a href="#" class="logo">
+      <!-- Logo/Home -->
+      <a href="index.html" class="logo">
         <i class="fas fa-box-open"></i>Unboxd
       </a>
 
-      <!-- Center: Search Bar -->
+      <!-- Search Bar -->
       <div class="search-bar">
-        <input type="text" placeholder="Search figurines, sellers..." />
+        <input type="text" placeholder="Search messages..." />
         <button><i class="fas fa-search"></i></button>
       </div>
 
-      <!-- Right: Icon Buttons -->
+      <!-- Icon Buttons -->
       <div class="nav-icons">
-        <!-- Trade -->
         <a href="trades.html" class="trade-btn" title="Trade">
           <i class="fas fa-handshake"></i>
-        </a>        
+        </a>
         <a href="messages.html" title="Messages"><i class="fas fa-envelope"></i></a>
-        <!-- Notifications -->
         <a href="notifications.html" title="Notifications"><i class="fas fa-bell"></i></a>
-        <!-- Wishlist -->
         <a href="wishlist.html" title="Wishlist"><i class="fas fa-heart"></i></a>
-        <!-- Profile/Login -->
         <a href="profile.html" title="Login/Profile"><i class="fas fa-user"></i></a>
       </div>
     </div>
   </header>
 
-  <!-- MAIN CONTENT (demo) -->
+  <!-- MAIN CONTENT -->
   <main>
-    <h1>Welcome to Unboxd</h1>
-    <p>Categories have been removed. Use the top nav for searching, trading, and more.</p>
+    <div class="messages-header">
+      <h1>Messages</h1>
+      <p>Communicate with fellow collectors</p>
+    </div>
+    <div class="messages-container">
+      <!-- Left side: list of chat threads -->
+      <div class="chat-list">
+        <h3>Chats</h3>
+        <ul>
+          <li><strong>CollectorJoe</strong> – “Hey, I saw your listing...”</li>
+          <li><strong>FigurineFanatic</strong> – “Interested in your trade offer.”</li>
+          <li><strong>AnimeAddict99</strong> – “Are you still selling that item?”</li>
+        </ul>
+      </div>
+      <!-- Right side: active chat window -->
+      <div class="chat-window">
+        <h3>Chat with CollectorJoe</h3>
+        <div class="chat-bubble">
+          <strong>You:</strong> Thanks for your message! Which figurine are you looking for?
+        </div>
+        <div class="chat-bubble">
+          <strong>CollectorJoe:</strong> I'm interested in your limited edition pop figure.
+        </div>
+      </div>
+    </div>
   </main>
-
 </body>
 </html>

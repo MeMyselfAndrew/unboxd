@@ -18,7 +18,84 @@
     top: 0;
     z-index: 999;
   }
-  
+  .categories-nav {
+  background-color: #fff;
+  padding: 0.75rem 1rem;
+  /* optional drop shadow */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.categories-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  position: relative;
+}
+
+.categories-nav li {
+  position: relative; /* anchor for dropdown */
+}
+
+/* Main category links */
+.categories-nav > ul > li > a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.5rem;
+  display: block;
+  transition: color 0.2s ease;
+}
+
+.categories-nav > ul > li > a:hover {
+  color: #f77062; /* highlight color */
+}
+
+/* Sub-menu container */
+.dropdown {
+  display: none;             /* hidden by default */
+  position: absolute;        /* placed relative to the parent li */
+  top: 2.5rem;               /* just below the main category link */
+  left: 0;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  border-radius: 6px;
+  padding: 1rem;
+  z-index: 999;
+  /* Key difference: display sub-items in a row (flex) */
+  display: flex;       /* toggled on hover */
+  flex-wrap: wrap;     /* if too many, wrap to new line */
+  gap: 1rem;           /* spacing between “bubble” items */
+  min-width: 240px;    /* optional min width so the sub-menu has some space */
+}
+
+/* Each sub-menu item is a “bubble” */
+.dropdown li {
+  list-style: none;
+}
+
+.dropdown li a {
+  display: inline-block;
+  background: #fff;
+  color: #333;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Hover effect for sub-items */
+.dropdown li a:hover {
+  background-color: #f77062;
+  color: #fff;
+}
+
+/* Show the sub-menu on hover of main li */
+.categories-nav li:hover .dropdown {
+  display: flex; /* becomes visible */
+}
+
   .navbar__container {
     display: flex;
     justify-content: space-between;
