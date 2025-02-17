@@ -258,10 +258,10 @@
       </a>
 
       <!-- Center: Search Bar -->
-      <div class="search-bar">
-        <input type="text" placeholder="Search figurines, sellers..." />
-        <button><i class="fas fa-search"></i></button>
-      </div>
+      <form class="search-bar" onsubmit="return handleSearch(event)">
+        <input type="text" id="search-input" placeholder="Search figurines, sellers..." />
+        <button type="submit"><i class="fas fa-search"></i></button>
+      </form>
 
       <!-- Right: Icon Buttons -->
       <div class="nav-icons">
@@ -347,6 +347,17 @@
       </div>
     </div>
   </div>
+
+  <script>
+    function handleSearch(event) {
+      event.preventDefault();
+      const query = document.getElementById('search-input').value;
+      if (query) {
+        const searchUrl = `search-results.html?q=${encodeURIComponent(query)}`;
+        window.location.href = searchUrl;
+      }
+    }
+  </script>
 
 </body>
 </html>
