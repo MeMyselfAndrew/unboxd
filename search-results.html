@@ -15,13 +15,112 @@
     rel="stylesheet"
   />
   <style>
-    body {
-      font-family: 'Kumbh Sans', sans-serif;
-      background: #f2f2f2;
-      color: #333;
+    @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+      font-family: Unbounded;
     }
+
+    body {
+      background: #f2f2f2;
+      color: #333333;
+    }
+
+    /* ========== HEADER ========== */
+    header {
+      width: 100%;
+      background-color: #131313;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ========== TOP NAV ========== */
+    .top-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1rem;
+      background-color: #fff; /* White background */
+    }
+
+    /* Left: Logo */
+    .logo {
+      text-decoration: none;
+      color: #4c87c2; /* Navy blue */
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+    }
+    .logo i {
+      margin-right: 0.5rem;
+    }
+
+    /* Center: Search Bar */
+    .search-bar {
+      display: flex;
+      align-items: center;
+      background: #fff;
+      border-radius: 4px;
+      padding: 0.25rem 0.5rem;
+      flex: 1;
+      margin: 0 1rem;
+      max-width: 400px;
+      border: 2px solid #4c87c2; /* Navy blue outline */
+    }
+    .search-bar input {
+      border: none;
+      outline: none;
+      flex: 1;
+      font-size: 1rem;
+    }
+    .search-bar button {
+      border: none;
+      background: none;
+      color: #333;
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+
+    /* Right: Icons (Trade, Messages, Notifications, Wishlist, Profile) */
+    .nav-icons {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .nav-icons a,
+    .nav-icons button {
+      color: #4c87c2; /* Navy blue */
+      text-decoration: none;
+      font-size: 1.1rem;
+      border: none;
+      background: none;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .nav-icons a:hover,
+    .nav-icons button:hover {
+      color: #001f3f; /* Darker blue */
+    }
+
+    .nav-icons button.trade-btn {
+      background: #4c87c2; /* Navy blue */
+      color: #fff;
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+    .nav-icons button.trade-btn:hover {
+      background: #001f3f; /* Darker blue */
+    }
+    .nav-icons a:hover i {
+      color: #001f3f; /* Darker blue */
+    }
+
     .container {
       max-width: 1200px;
       margin: 2rem auto;
@@ -51,6 +150,38 @@
   </style>
 </head>
 <body>
+  <!-- HEADER -->
+  <header>
+    <!-- TOP NAV -->
+    <div class="top-nav">
+      <!-- Left: Logo -->
+      <a href="#" class="logo">
+        <i class="fas fa-box-open"></i>Unboxd
+      </a>
+
+      <!-- Center: Search Bar -->
+      <form class="search-bar" onsubmit="return handleSearch(event)">
+        <input type="text" id="search-input" placeholder="Search figurines, sellers..." />
+        <button type="submit"><i class="fas fa-search"></i></button>
+      </form>
+
+      <!-- Right: Icon Buttons -->
+      <div class="nav-icons">
+        <!-- Trade -->
+        <a href="trades.html" class="trade-btn" title="Trade">
+          <i class="fas fa-handshake"></i>
+        </a>        
+        <a href="messages.html" title="Messages"><i class="fas fa-envelope"></i></a>
+        <!-- Notifications -->
+        <a href="notifications.html" title="Notifications"><i class="fas fa-bell"></i></a>
+        <!-- Wishlist -->
+        <a href="wishlist.html" title="Wishlist"><i class="fas fa-heart"></i></a>
+        <!-- Profile/Login -->
+        <a href="profile.html" title="Login/Profile"><i class="fas fa-user"></i></a>
+      </div>
+    </div>
+  </header>
+
   <div class="container">
     <h1>Search Results</h1>
     <div class="search-results">
@@ -70,6 +201,15 @@
       // Fetch and display search results based on the query
       // This is a placeholder for actual search result fetching logic
     });
+
+    function handleSearch(event) {
+      event.preventDefault();
+      const query = document.getElementById('search-input').value;
+      if (query) {
+        const searchUrl = `search-results.html?q=${encodeURIComponent(query)}`;
+        window.location.href = searchUrl;
+      }
+    }
   </script>
 </body>
 </html>
