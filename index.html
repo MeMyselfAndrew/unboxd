@@ -1,197 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Unboxd – Header (No Categories)</title>
+  <!-- Font Awesome for Icons -->
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+    integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+    crossorigin="anonymous"
+  />
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Inline Styles (Can Move to styles.css) -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Kumbh Sans', sans-serif;
+    }
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Unboxd – Online Trading Marketplace</title>
-    
-    <!-- Font Awesome for icons -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
-      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
-      crossorigin="anonymous"
-    />
-    
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    
-    <!-- Your custom stylesheet -->
-    <link rel="stylesheet" href="styles.css"/>
-  </head>
+    body {
+      background: #f2f2f2;
+      color: #333;
+    }
 
-  <body>
-    <!-- Navbar Section -->
-    <nav class="navbar">
-      <div class="navbar__container">
-        <!-- Logo & brand name changed to Unboxd -->
-        <a href="/" id="navbar__logo"><i class="fas fa-box-open"></i>Unboxd</a>
-        
-        <!-- Mobile toggle for smaller screens -->
-        <div class="navbar__toggle" id="mobile-menu">
-          <span class="bar"></span> 
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
+    /* ---------- HEADER WRAPPER ---------- */
+    header {
+      width: 100%;
+      background-color: #131313;
+    }
 
-        <ul class="navbar__menu">
-          <!-- Updated navigation items relevant to Unboxd -->
-          <li class="navbar__item">
-            <a href="/" class="navbar__links">Home</a>
-          </li>
-          <li class="navbar__item">
-            <a href="/collectibles" class="navbar__links">Collectibles</a>
-          </li>
-          <li class="navbar__item">
-            <a href="/marketplace" class="navbar__links">Marketplace</a>
-          </li>
-          <li class="navbar__item">
-            <a href="/trades" class="navbar__links">Trades</a>
-          </li>
-          <!-- Sign Up Button -->
-          <li class="navbar__btn">
-            <a href="/signup" class="button">Sign Up</a>
-          </li>
-        </ul>
+    /* ---------- TOP NAV ---------- */
+    .top-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1rem;
+    }
+
+    /* Logo/Home Button */
+    .logo {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+    }
+    .logo i {
+      margin-right: 0.5rem;
+    }
+
+    /* Search Bar */
+    .search-bar {
+      display: flex;
+      align-items: center;
+      background: #fff;
+      border-radius: 4px;
+      padding: 0.25rem 0.5rem;
+      flex: 1; /* So it stretches across available space */
+      margin: 0 1rem;
+      max-width: 500px; /* optional max width */
+    }
+
+    .search-bar input {
+      border: none;
+      outline: none;
+      flex: 1;
+      font-size: 1rem;
+    }
+
+    .search-bar button {
+      border: none;
+      background: none;
+      color: #333;
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+
+    /* Right-side icons/buttons */
+    .nav-icons {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    /* Trade/Sell Now Button */
+    .nav-icons button.sell-btn {
+      background: #f77062;
+      color: #fff;
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      font-size: 1rem;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .nav-icons button.sell-btn:hover {
+      background: #4837ff;
+    }
+
+    /* Icon Links */
+    .nav-icons a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.2rem;
+      position: relative;
+    }
+    .nav-icons a:hover i {
+      color: #f77062;
+    }
+
+    /* OPTIONAL Responsive Tweak */
+    @media screen and (max-width: 768px) {
+      .search-bar {
+        max-width: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="top-nav">
+      <!-- Logo/Home -->
+      <a href="#" class="logo">
+        <i class="fas fa-box-open"></i>Unboxd
+      </a>
+
+      <!-- Search Bar -->
+      <div class="search-bar">
+        <input type="text" placeholder="Search figurines, sellers..." />
+        <button><i class="fas fa-search"></i></button>
       </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <div class="main">
-      <div class="main__container">
-        <div class="main__content">
-          <!-- Replace the hero headings with Unboxd-specific text -->
-          <h1>Unboxd</h1>
-          <h2>Collect, Trade & Discover</h2>
-          <p>The ultimate online marketplace for blind box enthusiasts.</p>
-          <button class="main__btn">
-            <a href="/get-started">Get Started</a>
-          </button>
-        </div>
-        
-        <!-- Hero Image -->
-        <div class="main__img--container">
-          <!-- Replace with a relevant image or SVG -->
-          <img id="main__img" src="images/unboxd-hero.svg" alt="Unboxd Hero Graphic" />
-        </div>
+      <!-- Nav Icons -->
+      <div class="nav-icons">
+        <button class="sell-btn">Trade / Sell Now</button>
+        <a href="#" title="Messages"><i class="fas fa-envelope"></i></a>
+        <a href="#" title="Notifications"><i class="fas fa-bell"></i></a>
+        <a href="#" title="Wishlist"><i class="fas fa-heart"></i></a>
+        <a href="#" title="Login/Profile"><i class="fas fa-user"></i></a>
       </div>
     </div>
+  </header>
 
-    <!-- Services/Features Section -->
-    <div class="services">
-      <h1>Why Trade on Unboxd?</h1>
-      <div class="services__container">
-        <!-- Card 1 -->
-        <div class="services__card">
-          <h2>Trade with Confidence</h2>
-          <p>Safe & secure exchanges trusted by collectors worldwide.</p>
-          <button><a href="/trades">Learn More</a></button>
-        </div>
-        <!-- Card 2 -->
-        <div class="services__card">
-          <h2>Join the Community</h2>
-          <p>Connect with thousands of fellow blind box enthusiasts.</p>
-          <button><a href="/signup">Sign Up</a></button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Footer Section -->
-    <div class="footer__container">
-      <div class="footer__links">
-        <div class="footer__link--wrapper">
-          <div class="footer__link--items">
-            <h2>About Us</h2>
-            <a href="/how-it-works">How it works</a>
-            <a href="/testimonials">Testimonials</a>
-            <a href="/careers">Careers</a>
-            <a href="/terms-of-service">Terms of Service</a>
-          </div>
-          <div class="footer__link--items">
-            <h2>Contact Us</h2>
-            <a href="/contact">Contact</a>
-            <a href="/support">Support</a>
-            <a href="/sponsorships">Sponsorships</a>
-          </div>
-        </div>
-        <div class="footer__link--wrapper">
-          <div class="footer__link--items">
-            <h2>Categories</h2>
-            <a href="/collectibles/blind-boxes">Blind Boxes</a>
-            <a href="/collectibles/action-figures">Action Figures</a>
-            <a href="/collectibles/sonny-angels">Sonny Angels</a>
-            <a href="/collectibles/disney">Disney</a>
-          </div>
-          <div class="footer__link--items">
-            <h2>Social Media</h2>
-            <a href="/">Instagram</a>
-            <a href="/">Facebook</a>
-            <a href="/">Youtube</a>
-            <a href="/">Twitter</a>
-          </div>
-        </div>
-      </div>
-      
-      <section class="social__media">
-        <div class="social__media--wrap">
-          <div class="footer__logo">
-            <!-- Updated logo for footer -->
-            <a href="/" id="footer__logo"><i class="fas fa-box-open"></i>Unboxd</a>
-          </div>
-          <!-- Updated copyright -->
-          <p class="website__rights">© Unboxd 2025. All rights reserved.</p>
-          <!-- Social Icons -->
-          <div class="social__icons">
-            <a
-              class="social__icon--link"
-              href="/"
-              target="_blank"
-              aria-label="Facebook"
-            >
-              <i class="fab fa-facebook"></i>
-            </a>
-            <a
-              class="social__icon--link"
-              href="/"
-              target="_blank"
-              aria-label="Instagram"
-            >
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a
-              class="social__icon--link"
-              href="/"
-              target="_blank"
-              aria-label="Youtube"
-            >
-              <i class="fab fa-youtube"></i>
-            </a>
-            <a
-              class="social__icon--link"
-              href="/"
-              target="_blank"
-              aria-label="Twitter"
-            >
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a
-              class="social__icon--link"
-              href="/"
-              target="_blank"
-              aria-label="LinkedIn"
-            >
-              <i class="fab fa-linkedin"></i>
-            </a>
-          </div>
-        </div>
-      </section>
-    </div>
-
-    <!-- JS script for mobile menu toggle (optional) -->
-    <script src="app.js"></script>
-  </body>
+  <!-- Sample Content -->
+  <main style="padding: 1rem;">
+    <h1>Welcome to Unboxd</h1>
+    <p>Your one-stop place for all things collectible.</p>
+  </main>
+</body>
 </html>
