@@ -44,11 +44,11 @@
       align-items: center;
       justify-content: space-between;
       padding: 0.75rem 1rem;
-      background-color: #131313;
+      background-color: #fff; /* White background */
     }
     .logo {
       text-decoration: none;
-      color: #fff;
+      color: #4c87c2; /* Navy blue */
       font-size: 1.5rem;
       display: flex;
       align-items: center;
@@ -65,6 +65,7 @@
       flex: 1;
       margin: 0 1rem;
       max-width: 400px;
+      border: 2px solid #4c87c2; /* Navy blue outline */
     }
     .search-bar input {
       border: none;
@@ -86,7 +87,7 @@
     }
     .nav-icons a,
     .nav-icons button {
-      color: #fff;
+      color: #4c87c2; /* Navy blue */
       text-decoration: none;
       font-size: 1.1rem;
       border: none;
@@ -95,7 +96,7 @@
       position: relative;
     }
     .nav-icons button.trade-btn {
-      background: #f77062;
+      background: #4c87c2; /* Navy blue */
       color: #fff;
       padding: 0.4rem 0.8rem;
       border-radius: 4px;
@@ -103,10 +104,14 @@
       transition: background 0.3s ease;
     }
     .nav-icons button.trade-btn:hover {
-      background: #4837ff;
+      background: #001f3f; /* Darker blue */
     }
     .nav-icons a:hover i {
-      color: #f77062;
+      color: #001f3f; /* Darker blue */
+    }
+    .nav-icons a:hover,
+    .nav-icons button:hover {
+      color: #001f3f; /* Darker blue */
     }
     /* MAIN CONTENT */
     main {

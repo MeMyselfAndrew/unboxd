@@ -31,7 +31,7 @@
 
     body {
       background: #f2f2f2;
-      color: #333;
+      color: #333333;
     }
 
     /* ========== HEADER ========== */
@@ -48,13 +48,13 @@
       align-items: center;
       justify-content: space-between;
       padding: 0.75rem 1rem;
-      background-color: #131313;
+      background-color: #fff; /* White background */
     }
 
-    /* Left: Logo (Home) */
+    /* Left: Logo */
     .logo {
       text-decoration: none;
-      color: #fff;
+      color: #4c87c2; /* Navy blue */
       font-size: 1.5rem;
       display: flex;
       align-items: center;
@@ -73,6 +73,7 @@
       flex: 1;
       margin: 0 1rem;
       max-width: 400px;
+      border: 2px solid #4c87c2; /* Navy blue outline */
     }
     .search-bar input {
       border: none;
@@ -96,7 +97,7 @@
     }
     .nav-icons a,
     .nav-icons button {
-      color: #fff;
+      color: #4c87c2; /* Navy blue */
       text-decoration: none;
       font-size: 1.1rem;
       border: none;
@@ -104,8 +105,14 @@
       cursor: pointer;
       position: relative;
     }
+
+    .nav-icons a:hover,
+    .nav-icons button:hover {
+      color: #001f3f; /* Darker blue */
+    }
+
     .nav-icons button.trade-btn {
-      background: #f77062;
+      background: #4c87c2; /* Navy blue */
       color: #fff;
       padding: 0.4rem 0.8rem;
       border-radius: 4px;
@@ -113,10 +120,10 @@
       transition: background 0.3s ease;
     }
     .nav-icons button.trade-btn:hover {
-      background: #4837ff;
+      background: #001f3f; /* Darker blue */
     }
     .nav-icons a:hover i {
-      color: #f77062;
+      color: #001f3f; /* Darker blue */
     }
 
     /* DEMO MAIN CONTENT */
@@ -127,6 +134,115 @@
       background: #fff;
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+    }
+
+    main .content {
+      flex: 1;
+      padding: 1rem;
+      border: 2px solid #333;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+
+    main .content .profile-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #4c87c2;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+
+    main .content .profile-btn:hover {
+      background-color: #001f3f;
+    }
+
+    main img {
+      max-width: 50%;
+      height: auto;
+      margin-left: 1rem;
+      border-radius: 8px;
+    }
+
+    .recommended {
+      max-width: 1200px;
+      margin: 1.5rem auto;
+      padding: 1rem;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .recommended h2 {
+      margin-bottom: 1rem;
+    }
+
+    .recommended .items {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .recommended .item {
+      flex: 1;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+
+    .recommended .item img {
+      max-width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .categories {
+      display: flex;
+      justify-content: center;
+      background-color: #131313;
+      padding: 0.5rem 0;
+    }
+
+    .categories .category {
+      position: relative;
+      margin: 0 1rem;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .categories .category:hover .dropdown {
+      display: block;
+    }
+
+    .categories .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #fff;
+      color: #333;
+      border-radius: 4px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+
+    .categories .dropdown a {
+      display: block;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .categories .dropdown a:hover {
+      background-color: #f2f2f2;
     }
   </style>
 </head>
@@ -162,14 +278,75 @@
         <a href="profile.html" title="Login/Profile"><i class="fas fa-user"></i></a>
       </div>
     </div>
+
+    <!-- CATEGORIES BAR -->
+    <div class="categories">
+      <div class="category">
+        Blindbox
+        <div class="dropdown">
+          <a href="#">Subcategory 1</a>
+          <a href="#">Subcategory 2</a>
+        </div>
+      </div>
+      <div class="category">
+        Designer
+        <div class="dropdown">
+          <a href="#">Subcategory 1</a>
+          <a href="#">Subcategory 2</a>
+        </div>
+      </div>
+      <div class="category">
+        Anime & Manga
+        <div class="dropdown">
+          <a href="#">Subcategory 1</a>
+          <a href="#">Subcategory 2</a>
+        </div>
+      </div>
+      <div class="category">
+        Gaming
+        <div class="dropdown">
+          <a href="#">Subcategory 1</a>
+          <a href="#">Subcategory 2</a>
+        </div>
+      </div>
+      <div class="category">
+        Custom
+        <div class="dropdown">
+          <a href="#">Subcategory 1</a>
+          <a href="#">Subcategory 2</a>
+        </div>
+      </div>
+    </div>
   </header>
 
   <!-- MAIN CONTENT (demo) -->
   <main>
-    <h1>Welcome to Unboxd</h1>
-    <p>Categories have been removed. Use the top nav for searching, trading, and more.</p>
+    <div class="content">
+      <h1>Welcome to Unboxd</h1>
+      <p>Collect, Trade and Discover</p>
+      <a href="profile.html" class="profile-btn">Go to Profile</a>
+    </div>
     <img src="Figurines display.jpeg" alt="Description of image 1">
   </main>
+
+  <!-- RECOMMENDED SECTION -->
+  <div class="recommended">
+    <h2>Recommended for You</h2>
+    <div class="items">
+      <div class="item">
+        <img src="Labubu.png" alt="Labubu">
+        <p>Labubu</p>
+      </div>
+      <div class="item">
+        <img src="Smiski.png" alt="Smiski">
+        <p>Smiski</p>
+      </div>
+      <div class="item">
+        <img src="Sonny Angel.jpg" alt="Sonny Angel">
+        <p>Sonny Angel</p>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>

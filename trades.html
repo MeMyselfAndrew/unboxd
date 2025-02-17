@@ -30,8 +30,9 @@
     }
 
     body {
-      background: #f2f2f2;
+      background: #e0e0e0;
       color: #333;
+      font-family: 'Kumbh Sans', sans-serif;
     }
 
     /* ========== HEADER ========== */
@@ -40,6 +41,7 @@
       background-color: #131313;
       display: flex;
       flex-direction: column;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
     /* ========== TOP NAV ========== */
@@ -48,16 +50,18 @@
       align-items: center;
       justify-content: space-between;
       padding: 0.75rem 1rem;
-      background-color: #131313;
+      background-color: #fff; /* White background */
+      border-bottom: 1px solid #ddd;
     }
 
     /* Left: Logo (Home) */
     .logo {
       text-decoration: none;
-      color: #fff;
+      color: #4c87c2; /* Navy blue */
       font-size: 1.5rem;
       display: flex;
       align-items: center;
+      font-weight: bold;
     }
     .logo i {
       margin-right: 0.5rem;
@@ -73,12 +77,15 @@
       flex: 1;
       margin: 0 1rem;
       max-width: 400px;
+      border: 2px solid #4c87c2; /* Navy blue outline */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
     .search-bar input {
       border: none;
       outline: none;
       flex: 1;
       font-size: 1rem;
+      padding: 0.5rem;
     }
     .search-bar button {
       border: none;
@@ -86,6 +93,7 @@
       color: #333;
       font-size: 1.1rem;
       cursor: pointer;
+      padding: 0.5rem;
     }
 
     /* Right: Icons (Trade, Messages, Notifications, Wishlist, Profile) */
@@ -96,34 +104,36 @@
     }
     .nav-icons a,
     .nav-icons button {
-      color: #fff;
+      color: #4c87c2; /* Navy blue */
       text-decoration: none;
       font-size: 1.1rem;
       border: none;
       background: none;
       cursor: pointer;
       position: relative;
+      transition: color 0.3s ease;
     }
     .nav-icons button.trade-btn {
-      background: #f77062;
+      background: #4c87c2; /* Navy blue */
       color: #fff;
       padding: 0.4rem 0.8rem;
       border-radius: 4px;
       font-size: 1rem;
       transition: background 0.3s ease;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
     .nav-icons button.trade-btn:hover {
-      background: #4837ff;
+      background: #001f3f; /* Darker blue */
     }
     .nav-icons a:hover i {
-      color: #f77062;
+      color: #001f3f; /* Darker blue */
     }
 
     /* MAIN CONTENT */
     main {
       max-width: 1200px;
       margin: 1.5rem auto;
-      padding: 1rem;
+      padding: 2rem;
       background: #fff;
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -132,12 +142,13 @@
     .trades-header {
       text-align: center;
       margin-bottom: 1rem;
+      color: #001f3f;
     }
 
     .trades-list {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1rem;
+      gap: 1.5rem;
     }
 
     .trade-card {
@@ -145,13 +156,20 @@
       padding: 1rem;
       border-radius: 6px;
       box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .trade-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
     .trade-card h3 {
       margin-bottom: 0.5rem;
       color: #105849;
+      font-size: 1.25rem;
     }
     .trade-card p {
       line-height: 1.5;
+      color: #555;
     }
   </style>
 </head>
