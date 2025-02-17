@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Unboxd – Trades</title>
+
+  <!-- Font Awesome for Icons -->
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+    integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+    crossorigin="anonymous"
+  />
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Inline CSS (Move to styles.css if you prefer) -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Kumbh Sans', sans-serif;
+    }
+
+    body {
+      background: #f2f2f2;
+      color: #333;
+    }
+
+    /* ========== HEADER ========== */
+    header {
+      width: 100%;
+      background-color: #131313;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ========== TOP NAV ========== */
+    .top-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1rem;
+      background-color: #131313;
+    }
+
+    /* Left: Logo (Home) */
+    .logo {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+    }
+    .logo i {
+      margin-right: 0.5rem;
+    }
+
+    /* Center: Search Bar */
+    .search-bar {
+      display: flex;
+      align-items: center;
+      background: #fff;
+      border-radius: 4px;
+      padding: 0.25rem 0.5rem;
+      flex: 1;
+      margin: 0 1rem;
+      max-width: 400px;
+    }
+    .search-bar input {
+      border: none;
+      outline: none;
+      flex: 1;
+      font-size: 1rem;
+    }
+    .search-bar button {
+      border: none;
+      background: none;
+      color: #333;
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+
+    /* Right: Icons (Trade, Messages, Notifications, Wishlist, Profile) */
+    .nav-icons {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .nav-icons a,
+    .nav-icons button {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.1rem;
+      border: none;
+      background: none;
+      cursor: pointer;
+      position: relative;
+    }
+    .nav-icons button.trade-btn {
+      background: #f77062;
+      color: #fff;
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+    .nav-icons button.trade-btn:hover {
+      background: #4837ff;
+    }
+    .nav-icons a:hover i {
+      color: #f77062;
+    }
+
+    /* MAIN CONTENT */
+    main {
+      max-width: 1200px;
+      margin: 1.5rem auto;
+      padding: 1rem;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .trades-header {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .trades-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+
+    .trade-card {
+      background: #fafafa;
+      padding: 1rem;
+      border-radius: 6px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .trade-card h3 {
+      margin-bottom: 0.5rem;
+      color: #105849;
+    }
+    .trade-card p {
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="top-nav">
+      <!-- Left: Logo/Home -->
+      <a href="index.html" class="logo">
+        <i class="fas fa-box-open"></i>Unboxd
+      </a>
+
+      <!-- Center: Search Bar -->
+      <div class="search-bar">
+        <input type="text" placeholder="Search trades..." />
+        <button><i class="fas fa-search"></i></button>
+      </div>
+
+      <!-- Right: Icon Buttons -->
+      <div class="nav-icons">
+        <!-- Trade (optional link to this same page or another route) -->
+        <button class="trade-btn" title="Trade">
+          <i class="fas fa-handshake"></i>
+        </button>
+        <!-- Messages -->
+        <a href="messages.html" title="Messages"><i class="fas fa-envelope"></i></a>
+        <!-- Notifications -->
+        <a href="notifications.html" title="Notifications"><i class="fas fa-bell"></i></a>
+        <!-- Wishlist -->
+        <a href="wishlist.html" title="Wishlist"><i class="fas fa-heart"></i></a>
+        <!-- Profile/Login -->
+        <a href="profile.html" title="Login/Profile"><i class="fas fa-user"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <div class="trades-header">
+      <h1>Trades</h1>
+      <p>Find and manage your collectible trades here.</p>
+    </div>
+
+    <!-- Example "trade listings" or placeholders -->
+    <div class="trades-list">
+      <div class="trade-card">
+        <h3>Trade Offer #1</h3>
+        <p>Offering a limited-edition figurine from the <strong>Anime/Manga</strong> category. Looking for blind box trades or pop-culture items.</p>
+      </div>
+      <div class="trade-card">
+        <h3>Trade Offer #2</h3>
+        <p>Swapping a rare <strong>Designer</strong> vinyl figure for any gaming-related collectibles. Message me for details!</p>
+      </div>
+      <div class="trade-card">
+        <h3>Trade Offer #3</h3>
+        <p>Seeking a <strong>Custom</strong> handcrafted figurine. I can offer multiple items from my collection in return.</p>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>
