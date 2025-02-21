@@ -43,7 +43,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 0.75rem 1rem;
-      background-color: #fff; /* White background */
+      background-color: #f2f2f2; /* Off-white background */
     }
 
     /* Left: Logo */
@@ -99,6 +99,11 @@
       background: none;
       cursor: pointer;
       position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.5rem;
+      height: 2.5rem;
     }
 
     .nav-icons a:hover,
@@ -119,6 +124,17 @@
     }
     .nav-icons a:hover i {
       color: #001f3f; /* Darker blue */
+    }
+
+    .nav-icons a.active,
+    .nav-icons button.active {
+      background-color: #4c87c2; /* Navy blue */
+      color: #fff; /* White icon */
+      border-radius: 4px;
+      padding: 0.4rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .container {
@@ -147,6 +163,19 @@
       height: auto;
       border-radius: 8px;
     }
+    .back-to-home {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background-color: #4c87c2;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+    .back-to-home:hover {
+      background-color: #001f3f;
+    }
   </style>
 </head>
 <body>
@@ -155,7 +184,7 @@
     <!-- TOP NAV -->
     <div class="top-nav">
       <!-- Left: Logo -->
-      <a href="#" class="logo">
+      <a href="index.html" class="logo">
         <i class="fas fa-box-open"></i>Unboxd
       </a>
 
@@ -192,6 +221,7 @@
       </div>
       <!-- Additional search results will be appended here -->
     </div>
+    <a href="index.html" class="back-to-home">Back to Home</a>
   </div>
   <script>
     document.addEventListener('DOMContentLoaded', function() {

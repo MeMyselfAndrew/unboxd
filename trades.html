@@ -20,7 +20,7 @@
 
   <!-- Inline CSS (Move to styles.css if you prefer) -->
   <style>
-        @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
 
     * {
       margin: 0;
@@ -30,9 +30,8 @@
     }
 
     body {
-      background: #e0e0e0;
+      background: #f2f2f2;
       color: #333;
-      font-family: 'Kumbh Sans', sans-serif;
     }
 
     /* ========== HEADER ========== */
@@ -41,7 +40,6 @@
       background-color: #131313;
       display: flex;
       flex-direction: column;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
     /* ========== TOP NAV ========== */
@@ -50,8 +48,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 0.75rem 1rem;
-      background-color: #fff; /* White background */
-      border-bottom: 1px solid #ddd;
+      background-color: #f2f2f2; /* Off-white background */
     }
 
     /* Left: Logo (Home) */
@@ -61,7 +58,6 @@
       font-size: 1.5rem;
       display: flex;
       align-items: center;
-      font-weight: bold;
     }
     .logo i {
       margin-right: 0.5rem;
@@ -78,14 +74,12 @@
       margin: 0 1rem;
       max-width: 400px;
       border: 2px solid #4c87c2; /* Navy blue outline */
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
     .search-bar input {
       border: none;
       outline: none;
       flex: 1;
       font-size: 1rem;
-      padding: 0.5rem;
     }
     .search-bar button {
       border: none;
@@ -93,7 +87,6 @@
       color: #333;
       font-size: 1.1rem;
       cursor: pointer;
-      padding: 0.5rem;
     }
 
     /* Right: Icons (Trade, Messages, Notifications, Wishlist, Profile) */
@@ -111,8 +104,18 @@
       background: none;
       cursor: pointer;
       position: relative;
-      transition: color 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.5rem;
+      height: 2.5rem;
     }
+
+    .nav-icons a:hover,
+    .nav-icons button:hover {
+      color: #001f3f; /* Darker blue */
+    }
+
     .nav-icons button.trade-btn {
       background: #4c87c2; /* Navy blue */
       color: #fff;
@@ -120,13 +123,23 @@
       border-radius: 4px;
       font-size: 1rem;
       transition: background 0.3s ease;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
     .nav-icons button.trade-btn:hover {
       background: #001f3f; /* Darker blue */
     }
     .nav-icons a:hover i {
       color: #001f3f; /* Darker blue */
+    }
+
+    .nav-icons a.active,
+    .nav-icons button.active {
+      background-color: #4c87c2; /* Navy blue */
+      color: #fff; /* White icon */
+      border-radius: 4px;
+      padding: 0.4rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
     }
 
     /* MAIN CONTENT */
@@ -192,7 +205,7 @@
       <!-- Right: Icon Buttons -->
       <div class="nav-icons">
         <!-- Trade (optional link to this same page or another route) -->
-        <button class="trade-btn" title="Trade">
+        <button class="trade-btn active" title="Trade">
           <i class="fas fa-handshake"></i>
         </button>
         <!-- Messages -->

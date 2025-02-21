@@ -48,7 +48,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 0.75rem 1rem;
-      background-color: #fff; /* White background */
+      background-color: #f2f2f2; /* Off-white background */
     }
 
     /* Left: Logo */
@@ -104,6 +104,11 @@
       background: none;
       cursor: pointer;
       position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.5rem;
+      height: 2.5rem;
     }
 
     .nav-icons a:hover,
@@ -124,6 +129,17 @@
     }
     .nav-icons a:hover i {
       color: #001f3f; /* Darker blue */
+    }
+
+    .nav-icons a.active,
+    .nav-icons button.active {
+      background-color: #4c87c2; /* Navy blue */
+      color: #fff; /* White icon */
+      border-radius: 4px;
+      padding: 0.4rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
     }
 
     /* DEMO MAIN CONTENT */
